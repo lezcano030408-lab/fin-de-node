@@ -8,48 +8,72 @@
 
 <style>
 body {
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: white;
+    background: linear-gradient(135deg, #000000, #0a0f1c, #05080f);
+    color: #e0f7ff;
     font-family: 'Segoe UI', sans-serif;
 }
 
 /* Glass card */
 .glass {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
+    background: rgba(0, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border-radius: 18px;
     padding: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.08);
 }
 
 /* Inputs */
 .form-control {
     background: transparent;
-    border: 1px solid #8a2be2;
-    color: white;
+    border: 1px solid rgba(0, 255, 255, 0.4);
+    color: #e0f7ff;
 }
 
+/* Placeholder visible */
+.form-control::placeholder {
+    color: #00eaff; /* cyan fuerte para que se vea */
+    opacity: 0.8;
+}
+
+/* Compatibilidad */
+.form-control::-webkit-input-placeholder {
+    color: #00eaff;
+}
+.form-control:-ms-input-placeholder {
+    color: #00eaff;
+}
+
+/* Focus */
 .form-control:focus {
-    border-color: #00d4ff;
-    box-shadow: 0 0 10px #00d4ff;
+    border-color: #00eaff;
+    box-shadow: 0 0 12px #00eaff;
+    outline: none;
+}
+
+.form-control:focus::placeholder {
+    color: rgba(1, 1, 1, 0.4); /* baja al escribir */
 }
 
 /* Botón */
 .btn-neon {
-    background: linear-gradient(45deg, #8a2be2, #00d4ff);
+    background: linear-gradient(45deg, #00cfff, #00f7ff);
     border: none;
-    color: white;
+    color: #001018;
     font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
 
 .btn-neon:hover {
-    opacity: 0.9;
+    opacity: 0.85;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
 }
 
 /* Notas */
 .nota {
-    background: rgba(0,0,0,0.4);
-    border-left: 4px solid #8a2be2;
+    background: rgba(0, 10, 20, 0.6);
+    border-left: 4px solid #00eaff;
     padding: 15px;
     border-radius: 10px;
     margin-top: 10px;
@@ -58,11 +82,13 @@ body {
 
 .nota:hover {
     transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
 /* Títulos */
 h1, h2, h3 {
-    color: #00d4ff;
+    color: #00eaff;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
 }
 </style>
 
@@ -72,7 +98,7 @@ h1, h2, h3 {
 
 <div class="container mt-5">
 
-    <h1 class="text-center mb-4">🚀 App de Notas</h1>
+    <h1 class="text-center mb-4"> App de lezcano</h1>
 
     <!-- FORM -->
     <div class="glass mb-4">
